@@ -1,0 +1,54 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+
+float mes1, mes2, mes3;
+float media_vendas;
+float media_diaria;
+float estoque_minimo;
+float estoque_maximo;
+float tr;
+float lr;
+float ea;
+
+printf ("Digite as vendas do Mes 1:");
+scanf ("%f", &mes1);
+
+printf ("Digite as vendas do mes 2:");
+scanf ("%f", &mes2);
+
+printf ("Digite as vendas do mes 3:");
+scanf ("%f", &mes3);
+
+printf ("Digite o TR:");
+scanf ("%f", &tr);
+
+printf ("Digite o LR:");
+scanf ("%f", &lr);
+
+printf ("Digite o EA:");
+scanf ("%f", &ea);
+
+
+
+
+media_vendas = (mes1 + mes2 + mes3)/3.0;
+media_diaria = media_vendas/ 25.0;
+estoque_minimo = media_diaria*tr;
+estoque_maximo = estoque_minimo+lr;
+
+
+printf ("media diaria: %.2f\n ", media_diaria);
+printf ("Estoque minimo: %.2f\n ", estoque_minimo);
+
+if (ea<estoque_maximo){
+    printf("Comprar");
+}
+else{
+    printf ("Não comprar");
+        
+}
+
+    return 0;
+}
